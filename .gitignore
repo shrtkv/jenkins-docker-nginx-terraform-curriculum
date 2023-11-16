@@ -1,0 +1,42 @@
+# General
+*.log
+*.tmp
+*.temp
+*.swp
+.DS_Store
+
+# Terraform
+**/.terraform/*
+*.tfstate
+*.tfstate.*.backup
+*.tfstate.backup
+*.tfvars
+*.tfplan
+crash.log
+
+# Ignore Terraform override files, which may contain sensitive data
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Docker
+**/docker/*.log
+**/docker/*.pid
+**/docker/.env
+docker-compose.override.yml
+
+# Jenkins
+Jenkinsfile.*.backup
+
+# Ignore any environment files that may contain secrets
+*.env
+!example.env
+
+# Ignore potential private keys
+*.pem
+*.key
+
+# Ignore specific config files that may contain sensitive information
+/config/*.conf
+
